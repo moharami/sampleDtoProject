@@ -4,8 +4,69 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccbd816a07b206f971042295b899d1ba",
+    "content-hash": "227f06c0f4808eac1d53f5abd92c2835",
     "packages": [
+        {
+            "name": "adventure-tech/data-transfer-object",
+            "version": "1.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Adventure-Tech/data-transfer-object.git",
+                "reference": "6128287e848fde24fa82ab3c4b97fad1a6e88a8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Adventure-Tech/data-transfer-object/zipball/6128287e848fde24fa82ab3c4b97fad1a6e88a8a",
+                "reference": "6128287e848fde24fa82ab3c4b97fad1a6e88a8a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^9.0",
+                "nesbot/carbon": "^2.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "jetbrains/phpstorm-attributes": "^1.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AdventureTech\\DataTransferObject\\Laravel\\DataTransferObjectServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AdventureTech\\DataTransferObject\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Simen Mørch",
+                    "email": "simen.morch@adventuretech.no",
+                    "homepage": "https://adventuretech.no",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A strict and opinionated DTO implementation for Laravel",
+            "homepage": "https://github.com/Adventure-Tech/data-transfer-object",
+            "keywords": [
+                "adventure-tech",
+                "data-transfer-object"
+            ],
+            "support": {
+                "issues": "https://github.com/Adventure-Tech/data-transfer-object/issues",
+                "source": "https://github.com/Adventure-Tech/data-transfer-object/tree/1.2.8"
+            },
+            "time": "2022-12-23T16:17:14+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.10.2",
@@ -1610,6 +1671,70 @@
                 }
             ],
             "time": "2022-04-17T13:12:02+00:00"
+        },
+        {
+            "name": "moharami/laraveldatatransferobject",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../LaraveDataTransferObject",
+                "reference": "0f90d12f63088fb109798da889cc99de1bac2a26"
+            },
+            "require": {
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Moharami\\LaravelDataTransferObject\\LaravelDataTransferObjectServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelDataTransferObject": "Moharami\\LaravelDataTransferObject\\LaravelDataTransferObjectFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Moharami\\LaravelDataTransferObject\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Moharami\\LaravelDataTransferObject\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test-coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Amir Moharami",
+                    "email": "a.moharami@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Transfer Data from Api To Controller",
+            "homepage": "https://github.com/moharami/laraveldatatransferobject",
+            "keywords": [
+                "laraveldatatransferobject",
+                "moharami"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "monolog/monolog",
@@ -7828,7 +7953,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "moharami/laraveldatatransferobject": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
